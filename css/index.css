@@ -144,7 +144,7 @@ main {
     position: relative; 
     margin-bottom: 20px;
     background-color: #F4F5F7;
-    margin: 10px;
+    margin: 5px;
 }
 
 .overlay { 
@@ -260,7 +260,8 @@ main {
     margin: 40px 0;
 }
   
-.pagination a {
+.pagination button {
+    border: none;
     background-color: #F9F1E7;
     color: #000000;
     padding: 15px 25px;
@@ -274,12 +275,12 @@ main {
     border-radius: 10px;
 }
   
-.pagination a:hover {
+.pagination button:hover {
     background-color: #B88E2F;
     color: white;
 }
   
-.pagination a.active {
+.pagination button.active {
     background-color: #B88E2F;
     color: white;
 }
