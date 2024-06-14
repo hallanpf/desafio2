@@ -18,13 +18,13 @@
 <body>
 <header>
     <div class="left">
-        <a href="/"><img src="../desafio2/images/Meubel_House_Logos-05.png" alt="Meubel House Logo">Compass</a>
+        <a href="#"><img src="../desafio2/images/Meubel_House_Logos-05.png" alt="Meubel House Logo">Compass</a>
     </div>
     <div class="center">
       <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Shop</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
 
@@ -54,25 +54,7 @@
   </section>
   
   <section class="filter-content-section">
-    <div class="filter-group">
-      <div class="left">
-        <img src="../desafio2/images/system-uicons_filtering.png" alt="Filter Button"><h3>Filter</h3>
-        <select id="sort" name="sort" onchange="applyFilter()">
-          <option value="Default">Default</option>
-          <option value="AZ">A-Z</option>
-          <option value="ZA">Z-A</option>
-          <option value="PriceHighLow">Price: High to low</option>
-          <option value="PriceLowHigh">Price: Low to high</option>
-        </select>
-      </div>
-      <div class="right">
-        <p>Showing 1 - 16 of 32 results</p>
-      
-    </div>
-    <div class="filter-group quantity">
-      <h3>Show</h3>
-      <p>16</p>
-    </div>
+    <img src="../desafio2/images/system-uicons_filtering.png" alt="Filter Button"><h3>Filter</h3>
   </section>
   
   <main>
@@ -83,7 +65,7 @@
     </div>
   </main>
   
-  <section class="pagination">{%PAGINATION%}</section>
+  <section class="pagination">Paginação</section>
   
   <section class="services-section">
     <div class="service">
@@ -132,7 +114,7 @@
         <div class="footer-column">
             <h3>Links</h3>
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
@@ -163,10 +145,9 @@
   </footer>
   
   <script defer src="../desafio2/modules/email-validation.js"></script>
-  <script src="../desafio2/modules/applyFilter.js"></script>
-  <script src="../desafio2/modules/orderFilter.js"></script>
   <script src="../desafio2/dev-data/data.js"></script>
   <script src="../desafio2/modules/resultsData.js"></script>
+  <!-- <script src="../desafio2/modules/pagination.js"></script> -->
  
       
   </body>

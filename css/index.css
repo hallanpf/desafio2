@@ -115,71 +115,12 @@ header {
 
 
 .filter-content-section {
-    display: flex;
-    justify-content: space-between;
+    width: 98.7%;
+    text-align: left;
     margin: 0px;
     padding: 10px;
     background-color: #F9F1E7;
     min-height: 80px;
-}
- 
-.filter-group {
-    margin-left: 100px;
-    /* background-color:#3A3A3A; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.filter-group .left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 280px;
-    padding-right: 40px;
-    margin-right: 20px;
-    border-right: 1px solid #000000;
-}
-
-.filter-group .right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-    padding-left: 20px;
-}
-
-.filter-group h3 {
-    font-size: 20px;
-    margin-left: -20px;
-    font-weight: normal;
-}
-  
-.filter-group select {
-    padding: 5px;
-    font-size: 16px;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.filter-group .quantity {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 510px;
-}
-
-.filter-group .quantity h3 {
-    font-size: 20px;
-}
-
-.filter-group .quantity p {
-    background-color: white;
-    color: #9F9F9F;
-    margin-left: 10px;
-    padding: 20px;
-    font-size: 20px;
 }
 
 main {
