@@ -17,7 +17,7 @@ module.exports = {
     if (currentPage > 1) {
       buttons += `<a href="/results?page=${
         currentPage - 1
-      }&sort=${sortOption}" class="pagination-button">Previous</a>`;
+      }&sort=${sortOption}" class="pagination-button">Anterior</a>`;
     }
 
     for (let i = 1; i <= totalPages; i++) {
@@ -29,34 +29,9 @@ module.exports = {
     if (currentPage < totalPages) {
       buttons += `<a href="/results?page=${
         currentPage + 1
-      }&sort=${sortOption}" class="pagination-button">Next</a>`;
+      }&sort=${sortOption}" class="pagination-button">Próximo</a>`;
     }
 
     return buttons;
   },
-
-  // createPaginationButtons: function (totalItems, currentPage, perPage) {
-  //   const totalPages = Math.ceil(totalItems / perPage);
-  //   let buttons = "";
-
-  //   if (currentPage > 1) {
-  //     buttons += `<a href="/results?page=${
-  //       currentPage - 1
-  //     }" class="pagination-button">Previous</a>`;
-  //   }
-
-  //   for (let i = 1; i <= totalPages; i++) {
-  //     buttons += `<a href="/results?page=${i}" class="pagination-button ${
-  //       currentPage === i ? "active" : ""
-  //     }">${i}</a>`;
-  //   }
-
-  //   if (currentPage < totalPages) {
-  //     buttons += `<a href="/results?page=${
-  //       currentPage + 1
-  //     }" class="pagination-button">Next</a>`;
-  //   }
-
-  //   return buttons;
-  // },
 };
