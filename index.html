@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/Meubel House_Logos-05.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700,900"      
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900"      
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../desafio2/css/index.css" />
+    <title>Shop Compass</title>
+</head>
+<body>
+<header>
+    <div class="left">
+        <a href="/"><img src="../desafio2/images/Meubel_House_Logos-05.png" alt="Meubel House Logo">Compass</a>
+    </div>
+    <div class="center">
+      <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </nav>
+  </div>
+    <div class="right">
+      <nav>
+          <ul>
+            <li><a href="#"><img src="../desafio2/images/mdi_account-alert-outline.png" alt="User Account"></a></li>
+            <li><a href="#"><img src="../desafio2/images/search_icon_outline.png" alt="Search Button"></a></li>
+            <li><a href="#"><img src="../desafio2/images/akar-icons_heart.png" alt="Favorite"></a></li>
+            <li><a href="#"><img src="../desafio2/images/ant-design_shopping-cart-outlined.png" alt="Shopping Cart"></a></li>
+
+        </ul>
+      </nav>
+    </div>
+</header>
+<section class="image-content-section">
+    <div class="image">
+      <img src="../desafio2/images/Rectangle_1.png" alt="">
+      <div class="shop-navigation">
+        <h3>Shop</h3>
+        <p><span>Home ></span> Shop</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="filter-content-section">
+    <div class="filter-group">
+      <div class="left">
+        <img src="../desafio2/images/system-uicons_filtering.png" alt="Filter Button"><h3>Filter</h3>
+        <select id="sort" name="sort" onchange="applyFilter()">
+          <option value="Default">Default</option>
+          <option value="AZ">A-Z</option>
+          <option value="ZA">Z-A</option>
+          <option value="PriceHighLow">Price: High to low</option>
+          <option value="PriceLowHigh">Price: Low to high</option>
+        </select>
+      </div>
+      <div class="right">
+        <p>Showing 1 - 16 of 32 results</p>
+      
+    </div>
+    <div class="filter-group quantity">
+      <h3>Show</h3>
+      <p>16</p>
+    </div>
+  </section>
+  
+  <main>
+    <div class="main-content-list">
+      <ul class="product-list">
+        <li class="product-item">
+            <div class="condition">
+                <img class="product-condition {%VALUE%}" src="{%CONDITION%}" alt="Condition">
+            </div>
+            <img class="product-image" src="{%IMAGE%}" alt="{%PRODUCT_NAME%}">
+            <div class="product-info">
+              <h3>{%PRODUCT_NAME%}</h3>
+              <p class="product-description">{%DESCRIPTION%}</p>
+              <div class="price">
+                <p class="product-price">Rp {%PRICE%}</p>
+                <p class="product-discount {%VALUE%}">{%PRICE_DISCOUNT%}</p>
+              </div>
+              <div class="overlay" id="product-overlay">
+                <div class="product-link">
+                  <div class="product-details">
+                    <a href="/product?id={%ID%}">See Details</a>
+                  </div>
+                  <div class="product-buttons">
+                    <a href="#"><img src="../desafio2/images/share-icon.png" alt="Share Button"></a> 
+                    <a href="#"><img src="../desafio2/images/compare-icon.png" alt="Compare Button"></a> 
+                    <a href="#"><img src="../desafio2/images/like-icon.png" alt="Like Button"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+  
+  <section class="pagination">{%PAGINATION%}</section>
+  
+  <section class="services-section">
+    <div class="service">
+      <div class="service-image">
+        <img src="../desafio2/images/Trophy.png" alt="High Quality">
+      </div>
+      <div class="service-info">
+        <h2>High Quality</h2>
+        <p>Crafted from top materials</p>
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-image">
+        <img src="../desafio2/images/Guarantee.png" alt="Warranty Protection">
+      </div>
+      <div class="service-info">
+        <h2>Warranty Protection</h2>
+        <p>Over 2 years</p>
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-image">
+        <img src="../desafio2/images/Shipping.png" alt="Free Shopping">
+      </div>
+      <div class="service-info">
+        <h2>Free Shopping</h2>
+        <p>Order over 150 $</p>
+      </div>
+    </div>
+    <div class="service">
+      <div class="service-image">
+        <img src="../desafio2/images/Support.png" alt="24 / 7 Support">
+      </div>
+      <div class="service-info">
+        <h2>24 / 7 Support</h2>
+        <p>Dedicated Support</p>
+      </div>
+</section>
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <h2>footer.</h2>
+            <p>Rua Alexandre Dumas, 1711 - 6º andar - Chácara Santo Antônio, São Paulo - SP, 04717-004</p>
+        </div>
+        <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Returns</a></li>
+            </ul>
+        </div>
+        <div class="footer-column newsletter">
+            <h3>Newsletter</h3>
+            <form id="emailForm" method="post">
+                <input id="emailInput" type="email" placeholder="Enter your Email Address">
+                <button type="submit">SUBSCRIBE</button>
+                <p id="resultMessage"></p>
+            </form>
+            
+        </div>
+        
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Compass UOL</p>
+    </div>
+  </footer>
+  
+  <script defer src="../desafio2/modules/email-validation.js"></script>
+  <script src="../desafio2/modules/applyFilter.js"></script>
+  <script src="../desafio2/modules/orderFilter.js"></script>
+      
+  </body>
+  </html>
