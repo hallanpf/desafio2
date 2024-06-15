@@ -1,14 +1,14 @@
-var currentPage = 1;
-var itemsPerPage = 8;
+let currentPage = 1;
+let itemsPerPage = 8;
 
 function renderPage(page) {
   document.querySelector(".product-list").innerHTML = "";
 
-  var start = (page - 1) * itemsPerPage;
-  var end = start + itemsPerPage;
+  let start = (page - 1) * itemsPerPage;
+  let end = start + itemsPerPage;
 
   data.slice(start, end).forEach(function (product) {
-    var li = document.createElement("li");
+    let li = document.createElement("li");
     li.className = "product-item";
 
     li.innerHTML = `
@@ -48,16 +48,30 @@ function renderPage(page) {
 
     document.querySelector(".product-list").appendChild(li);
   });
+
+  let totalProducts = data.length;
+  let displayedProducts = Math.min(end, totalProducts);
+  let resultsInfo = document.querySelector(".results-info");
+  resultsInfo.textContent = `Showing ${
+    start + 1
+  }-${displayedProducts} of ${totalProducts} results`;
 }
 
+document
+  .querySelector("#items-per-page-input")
+  .addEventListener("change", function (e) {
+    itemsPerPage = parseInt(e.target.value, 10);
+    updatePage();
+  });
+
 function renderPaginationButtons() {
-  var totalPages = Math.ceil(data.length / itemsPerPage);
-  var paginationContainer = document.querySelector(".pagination-container");
+  let totalPages = Math.ceil(data.length / itemsPerPage);
+  let paginationContainer = document.querySelector(".pagination-container");
 
   paginationContainer.innerHTML = "";
 
   if (currentPage > 1) {
-    var prevButton = document.createElement("button");
+    let prevButton = document.createElement("button");
     prevButton.textContent = "Previous";
     prevButton.addEventListener("click", function () {
       currentPage--;
@@ -66,8 +80,8 @@ function renderPaginationButtons() {
     paginationContainer.appendChild(prevButton);
   }
 
-  for (var i = 1; i <= totalPages; i++) {
-    var pageButton = document.createElement("button");
+  for (let i = 1; i <= totalPages; i++) {
+    let pageButton = document.createElement("button");
     pageButton.textContent = i;
     if (i === currentPage) {
       pageButton.disabled = true;
@@ -80,7 +94,7 @@ function renderPaginationButtons() {
   }
 
   if (currentPage < totalPages) {
-    var nextButton = document.createElement("button");
+    let nextButton = document.createElement("button");
     nextButton.textContent = "Next";
     nextButton.addEventListener("click", function () {
       currentPage++;
@@ -97,18 +111,4 @@ function updatePage() {
 
 document.addEventListener("DOMContentLoaded", function () {
   updatePage();
-});
-
-document.querySelector(".previous-page").addEventListener("click", function () {
-  if (currentPage > 1) {
-    currentPage--;
-    updatePage();
-  }
-});
-
-document.querySelector(".next-page").addEventListener("click", function () {
-  if (currentPage < Math.ceil(data.length / itemsPerPage)) {
-    currentPage++;
-    updatePage();
-  }
 });
