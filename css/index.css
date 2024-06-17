@@ -92,7 +92,7 @@ header {
     /* width: 100%; */
     position: relative;
     height: auto;
-    max-height: 325px;
+    max-height: auto;
 }
 
 .image-content-section .image img {
@@ -112,14 +112,26 @@ header {
     font-weight: 500;
     margin: 0;
     color: black;
-    font-size: 1.8vw; 
+    font-size: 40px;
 }
+
+@media screen and (max-width: 600px) {
+    .image-content-section .image .shop-navigation h3 {
+        font-size: 20px;
+    }
+}
+
 .image-content-section .image .shop-navigation p {
     margin: 0;
     color: black;
-    font-size: 0.8vw; 
+    font-size: 16px; 
 }
 
+@media screen and (max-width: 600px) {
+    .image-content-section .image .shop-navigation p {
+        font-size: 10px;
+    }
+}
 .image-content-section .image .shop-navigation p span {
     font-weight: bold;
 }
