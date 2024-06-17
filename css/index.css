@@ -145,7 +145,7 @@ header {
     padding: 12px;
 }
 
-.filter-button {
+.filter-icon {
     margin-top: -1px;
     padding: 12px;
     text-decoration: none;
@@ -153,21 +153,34 @@ header {
     border: none;
     font-size: 18px;
     color: black;
+
   }
-  
-.filter-menu {
-    display: none; 
+  .filter-menu {
     position: absolute;
     justify-content: space-around;
     width: 100px;
-    background-color: white;
     padding: 10px;
     z-index: 1;
-  }
-  
-.filter-button:hover + .filter-menu {
+    display: none;
+}
+
+.filter-menu.active {
+    margin-left: -10px;
+    margin-top: 200px;
     display: block;
-  }
+    height: 150px;
+}
+
+.filter-menu button {
+
+    background-color: #F9F1E7;
+    border: none;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
 
 .results-info {
     border-left: 1px solid #9F9F9F;

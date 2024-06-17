@@ -81,6 +81,22 @@ function renderFilterProducts(filterOption) {
   updatePage();
 }
 
+const filterButton = document.getElementById("filter-button");
+const filterMenu = document.querySelector(".filter-menu");
+
+filterButton.addEventListener("click", () => {
+  filterMenu.classList.toggle("active");
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    filterMenu.contains(event.target) &&
+    !filterButton.contains(event.target)
+  ) {
+    filterMenu.classList.remove("active");
+  }
+});
+
 function renderPaginationButtons() {
   let totalPages = Math.ceil(data.length / itemsPerPage);
   let paginationContainer = document.querySelector(".pagination-container");
