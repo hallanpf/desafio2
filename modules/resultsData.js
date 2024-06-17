@@ -80,7 +80,6 @@ function renderFilterProducts(filterOption) {
     data.sort((a, b) => a.id - b.id);
   }
 
-  // console.log(data);
   updatePage();
 }
 

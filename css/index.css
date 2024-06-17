@@ -161,7 +161,7 @@ header {
 .filter-content-section .right {
     display: flex;
     align-items: center;
-    margin-right: 80px;
+    margin-right: 60px;
 }
 
 @media screen and (max-width: 600px) {
