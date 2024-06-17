@@ -164,6 +164,12 @@ header {
     margin-right: 90px;
 }
 
+@media screen and (max-width: 600px) {
+    .filter-content-section .right {
+        margin-left: 70px;
+    }
+}
+
 .filter-bar {
     display: flex;
     justify-content: space-between;
