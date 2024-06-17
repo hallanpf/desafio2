@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../images/Meubel House_Logos-05.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../desafio2/images/Meubel_House_Logos-05.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:400,700,900"      
       rel="stylesheet"
@@ -18,13 +18,13 @@
 <body>
 <header>
     <div class="left">
-        <a href="/"><img src="../desafio2/images/Meubel_House_Logos-05.png" alt="Meubel House Logo">Compass</a>
+        <a href="/desafio2"><img src="../desafio2/images/Meubel_House_Logos-05.png" alt="Meubel House Logo">Compass</a>
     </div>
     <div class="center">
       <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Shop</a></li>
+            <li><a href="/desafio2">Home</a></li>
+            <li><a href="/desafio2">Shop</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
 
@@ -56,7 +56,15 @@
   <section class="filter-content-section">
     <div class="left">
     <div class="filter-bar">
-      <img src="../desafio2/images/system-uicons_filtering.png" alt="Filter Button"><h3>Filter</h3>
+      <button class="filter-button">
+        <img src="../desafio2/images/system-uicons_filtering.png" alt="Filter Button">Filter</button>
+      <div class="filter-menu">
+        <button onclick="renderFilterProducts('Default')">Default</button>
+        <button onclick="renderFilterProducts('A-Z')">A-Z</button>
+        <button onclick="renderFilterProducts('Z-A')">Z-A</button>
+        <button onclick="renderFilterProducts('Higher to Lower')">Higher to Lower</button>
+        <button onclick="renderFilterProducts('Lower to Higher')">Lower to Higher</button>
+      </div>
     </div>
     
     <div class="results-info">
@@ -130,8 +138,8 @@
         <div class="footer-column">
             <h3>Links</h3>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="/desafio2">Home</a></li>
+                <li><a href="/desafio2">Shop</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>

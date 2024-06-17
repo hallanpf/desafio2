@@ -13,7 +13,7 @@ function renderPage(page) {
 
     li.innerHTML = `
           <div class="condition" ${
-            product.condition ? "" : 'style="display: none;"'
+            product.condition ? "" : 'id="not-price-condition"'
           }>
             <img class="product-condition ${
               product.condition ? "active" : ""
@@ -63,6 +63,23 @@ document
     itemsPerPage = parseInt(e.target.value, 10);
     updatePage();
   });
+
+function renderFilterProducts(filterOption) {
+  if (filterOption === "A-Z") {
+    data.sort((a, b) => a.productName.localeCompare(b.productName));
+  } else if (filterOption === "Z-A") {
+    data.sort((a, b) => b.productName.localeCompare(a.productName));
+  } else if (filterOption === "Higher to Lower") {
+    data.sort((a, b) => b.price - a.price);
+  } else if (filterOption === "Lower to Higher") {
+    data.sort((a, b) => a.price - b.price);
+  } else if (filterOption === "Default") {
+    data.sort((a, b) => a.id - b.id);
+  }
+
+  // console.log(data);
+  updatePage();
+}
 
 function renderPaginationButtons() {
   let totalPages = Math.ceil(data.length / itemsPerPage);
