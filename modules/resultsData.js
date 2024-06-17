@@ -1,5 +1,5 @@
 let currentPage = 1;
-let itemsPerPage = 8;
+let itemsPerPage = 16;
 
 function renderPage(page) {
   document.querySelector(".product-list").innerHTML = "";
