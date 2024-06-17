@@ -52,9 +52,12 @@ function renderPage(page) {
   let totalProducts = data.length;
   let displayedProducts = Math.min(end, totalProducts);
   let resultsInfo = document.querySelector(".results-info");
+  let inputElement = document.querySelector("#items-per-page-input");
   resultsInfo.textContent = `Showing ${
     start + 1
   }-${displayedProducts} of ${totalProducts} results`;
+
+  inputElement.placeholder = displayedProducts;
 }
 
 document
